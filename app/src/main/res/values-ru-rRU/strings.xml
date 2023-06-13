@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Foxhole Artillery</string>
+    <string name="field_artillery_description">Нажмите, чтобы изменить тип на \"Field Artillery\"</string>
+    <string name="gunship_img_description">Нажмите, чтобы изменить тип на \"Gunship\"</string>
+    <string name="howitzerkit_img_description">Нажмите, чтобы изменить тип на \"Howitzerkit\"</string>
+    <string name="mortar_img_description">Нажмите, чтобы изменить тип на \"Mortar\"</string>
+    <string name="select_artillery_type">Выберите тип артиллерии</string>
+    <string name="field_artillery">Полевая артиллерия</string>
+    <string name="to_friendly_position">Местоположение союзника</string>
+    <string name="distance">Дистанция</string>
+    <string name="azimuth">Азимут</string>
+    <string name="to_enemy_position">Местоположение врага</string>
+    <string name="enemy_coordinates">Координаты врага</string>
+    <string name="gunship">Боевой корабль</string>
+    <string name="howitzer">Гаубица</string>
+    <string name="mortar">Мортира</string>
+    <string name="calculation_error">Ошибка в вычислениях: проверьте ввод</string>
+    <string name="out_of_range">Рассчитанные координаты за пределами досягаемости</string>
+</resources>

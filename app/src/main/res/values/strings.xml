@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Foxhole Artillery</string>
+    <string name="field_artillery_description">Click to change type to \"Field Artillery\"</string>
+    <string name="gunship_img_description">Click to change type to \"Gunship\"</string>
+    <string name="howitzerkit_img_description">Click to change type to \"Howitzerkit\"</string>
+    <string name="mortar_img_description">Click to change type to \"Mortar\"</string>
+    <string name="select_artillery_type">Select Artillery Type</string>
+    <string name="field_artillery">Field artillery</string>
+    <string name="to_friendly_position">To friendly position</string>
+    <string name="distance">Distance</string>
+    <string name="azimuth">Azimuth</string>
+    <string name="to_enemy_position">To enemy position</string>
+    <string name="enemy_coordinates">Enemy coordinates</string>
+    <string name="gunship">Gunship</string>
+    <string name="howitzer">Howitzer</string>
+    <string name="mortar">Mortar</string>
+    <string name="calculation_error">Calculation error: check input</string>
+    <string name="out_of_range">Calculated coordinates is out of selected artillery range</string>
+</resources>
