@@ -1,6 +1,6 @@
-package com.example.foxholeartillery
+package com.example.foxholeartillery.ui
 
-class ArtilleryRange(
+data class ArtilleryRange(
     val min: Double,
     val max: Double
 ) {

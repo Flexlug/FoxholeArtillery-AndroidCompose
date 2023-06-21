@@ -1,9 +1,8 @@
-package com.example.foxholeartillery
+package com.example.foxholeartillery.ui
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.selection.toggleable
-import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -16,7 +15,7 @@ import androidx.compose.ui.semantics.Role
 // Default IconToggleButton ripples are clipped by 24.dp
 
 @Composable
-fun CustomToggleButton(
+fun ArtilleryToggleButton(
     modifier: Modifier,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,

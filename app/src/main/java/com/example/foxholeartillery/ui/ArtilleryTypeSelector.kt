@@ -1,4 +1,4 @@
-package com.example.foxholeartillery
+package com.example.foxholeartillery.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,15 +26,17 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.foxholeartillery.ArtilleryType
+import com.example.foxholeartillery.CalculatorAction
+import com.example.foxholeartillery.CalculatorViewModel
+import com.example.foxholeartillery.R
 import com.example.foxholeartillery.ui.theme.Gray200
 import com.example.foxholeartillery.ui.theme.YellowSelected
 
-@Preview
 @Composable
 fun ArtilleryTypeSelector(
     modifier: Modifier = Modifier,
-    state: ArtilleryType = ArtilleryType.FieldArtillery,
-    onChange: (ArtilleryType) -> Unit = {  }
+    presenter: PresenterTypeSelector,
 ) {
     val artilleryTypes = remember {
         mapOf(
@@ -65,8 +67,8 @@ fun ArtilleryTypeSelector(
         )
     }
 
-    var (selectedArtillery, onArtillerySelectionChange) = remember {
-        mutableStateOf(artilleryTypes[state]!!)
+    val (selectedArtillery, onArtillerySelectionChange) = remember {
+        mutableStateOf(artilleryTypes[presenter.state.value.selectedArtilleryType]!!)
     }
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -93,7 +95,8 @@ fun ArtilleryTypeSelector(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             artilleryTypes.forEach { (_, artilleryData) ->
-                val selectedCurrent = selectedArtillery.type.javaClass == artilleryData.type.javaClass
+                val selectedCurrent =
+                    selectedArtillery.type.javaClass == artilleryData.type.javaClass
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
@@ -101,17 +104,17 @@ fun ArtilleryTypeSelector(
                         .weight(1f)
                         .selectable(
                             selected = selectedCurrent,
-                            onClick = {  },
+                            onClick = { },
                             role = Role.RadioButton
                         )
                 )
                 {
-                    CustomToggleButton(
+                    ArtilleryToggleButton(
                         modifier = Modifier
                             .background(if (selectedCurrent) YellowSelected else Gray200),
                         onCheckedChange = {
                             onArtillerySelectionChange(artilleryData)
-                            onChange(artilleryData.type)
+                            presenter.onSelect(CalculatorAction.ChangeArtilleryType(artilleryData.type))
                         },
                         checked = selectedCurrent
                     ) {
@@ -129,7 +132,7 @@ fun ArtilleryTypeSelector(
     }
 }
 
-data class ArtilleryTypeData (
+data class ArtilleryTypeData(
     val type: ArtilleryType,
     val imageResouce: Int,
     val nameResource: Int,
