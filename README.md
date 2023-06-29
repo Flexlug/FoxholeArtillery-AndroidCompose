@@ -1,6 +1,6 @@
 # FoxholeArtillery-AndroidCompose
-Калькулятор для рассчета азимута и дистанции до врага.
-Использовано: Kotlin, Jetpack Compose, MVPVM
+Калькулятор для рассчета азимута и дистанции до врага. </br>
+Использовано: **Kotlin, Jetpack Compose, MVPVM**
 
 ## Screenshots
 
