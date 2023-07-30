@@ -1,9 +1,9 @@
 # FoxholeArtillery-AndroidCompose
 Azimuth and distance calculator for artillerists. </br>
-Stack: **Kotlin, Jetpack Compose**
+Stack: **Kotlin, Jetpack Compose** </br>
 Template: **MVPVM**
 
-Heavily insipered by ![FoxholeArtillery-Mobile](https://github.com/XeniacDev/FoxholeArtillery-mobile)
+Heavily insipered by ![FoxholeArtillery-Mobile](https://github.com/XeniacDev/FoxholeArtillery-mobile) and [FoxholeArtillery-Windows](https://github.com/XeniacDev/FoxholeArtillery-Windows).
 
 ## Screenshots
 
